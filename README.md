@@ -1,4 +1,4 @@
-# rwt-vf-workshop-short
+# Responsive Web Typography Variable Font Workshop (short)
 Working files for the shortened version of my workshop on using variable fonts and modern CSS techniques.
 
 ## Initial setup
