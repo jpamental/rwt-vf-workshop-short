@@ -323,6 +323,7 @@ h2 + p {
     .figure-wrapper {
       font-size: calc( var(--p-font-size-max) * 1em); } }
 
+/* CSS shape outline for the goblet */
 .goblet {
   float: left;
   margin: 0 1.5rem 0 0;
