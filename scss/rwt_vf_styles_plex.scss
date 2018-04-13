@@ -110,12 +110,17 @@ li {
   color: #fbfbf6;
 }
 
+
 p {
   margin-left: auto;
   margin-right: auto;
   max-width: 38em;
 	transition: all linear 0.2s;
   hyphens: auto;
+  font-feature-settings: "liga" 1, "kern" 1;
+  .ot-off & {
+    font-feature-settings: "liga" 0, "kern" 0;
+  }
 }
 
 /* Variations and variables */

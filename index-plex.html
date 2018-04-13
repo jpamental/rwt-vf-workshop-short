@@ -54,6 +54,7 @@
   
   	<!-- BEGIN feature toggles -->
   	<a href="#" id="toggle-text-inverse" class="toggle-text-inverse button off">Color Inverse</a>
+  	<a href="#" id="toggle-ot-features" class="toggle-ot-features button on">OT Features</a>
   	<style>
   		.button {
   		  font-size: 1rem;
@@ -84,7 +85,7 @@
   		.toggle-text-inverse {
   		  position: fixed; 
   		  top: 0.5em; 
-  		  right: 0.5em; 
+  		  right: 8em; 
   		  z-index: 999;
   		}
   		@media (min-width: 30em) {
@@ -92,10 +93,23 @@
   			    right: 0.5em; 
   			}
   		}
-  		.toggle-text-inverse.on:after {
+  		.toggle-ot-features {
+  		  position: fixed; 
+  		  top: 0.5em; 
+  		  right: 0.5em; 
+  		  z-index: 999;
+  		}
+  		@media (min-width: 30em) {
+  			.toggle-ot-features {
+  			    top: 2.75em; 
+  			}
+  		}
+  		.toggle-text-inverse.on:after, 
+  		.toggle-ot-features.on:after {
   		  content: ": on";
   		}
-  		.toggle-text-inverse.off:after {
+  		.toggle-text-inverse.off:after, 
+  		.toggle-ot-features.off:after {
   		  content: ": off";
   		}
   	</style>
@@ -110,6 +124,12 @@
           document.getElementById('toggle-text-inverse').classList.toggle('on');
           document.getElementById('toggle-text-inverse').classList.toggle('off');
           document.getElementsByTagName("html")[0].classList.toggle('inverse');
+        });
+        document.getElementById('toggle-ot-features').addEventListener('click', function(e) {
+          e.preventDefault();
+        	document.getElementById('toggle-ot-features').classList.toggle('on');
+        	document.getElementById('toggle-ot-features').classList.toggle('off');
+        	document.getElementsByTagName("html")[0].classList.toggle('ot-off');
         });
       }
     </script>

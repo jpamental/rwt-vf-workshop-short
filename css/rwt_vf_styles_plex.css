@@ -93,7 +93,10 @@ p {
   margin-right: auto;
   max-width: 38em;
   transition: all linear 0.2s;
-  hyphens: auto; }
+  hyphens: auto;
+  font-feature-settings: "liga" 1, "kern" 1; }
+  .ot-off p {
+    font-feature-settings: "liga" 0, "kern" 0; }
 
 /* Variations and variables */
 p {

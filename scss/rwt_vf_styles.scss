@@ -115,17 +115,7 @@ p {
   margin-right: auto;
   max-width: 38em;
 	transition: all linear 0.2s;
-/* Warning: Needed for oldIE support, but words are broken up letter-by-letter */
- -ms-word-break: break-all;
-     word-break: break-all;
-
-     /* Non standard for webkit */
-     word-break: break-word;
-
--webkit-hyphens: auto;
-   -moz-hyphens: auto;
-    -ms-hyphens: auto;
-        hyphens: auto;
+  hyphens: auto;
 }
 
 /* Variations and variables */
