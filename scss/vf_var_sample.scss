@@ -141,7 +141,29 @@ button {
   line-height: calc( var(--h1-line-height-max) * 1em);
   margin: 0 auto 1em auto;
   max-width: 57.5rem;
-  padding: 3rem 0;
+  padding: 0 0 3rem 0;
+  &.demo-wght-bold {
+    font-weight: calc( var(--p-vf-wght) * var(--wght-multiplier) );
+    font-variation-settings: 
+      'wdth' 100, 
+      'YTLC' 500,
+      'YTAS' 750,
+      'YTDE' 250,
+      'YTUC' 750,
+      'opsz' calc( var(--h1-font-size-max) * 16 ), 
+      'grad' 88;
+    &:hover {
+      font-weight: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-l) );
+      font-variation-settings: 
+        'wdth' 100, 
+        'YTLC' 500,
+        'YTAS' 750,
+        'YTDE' 250,
+        'YTUC' 750,
+        'opsz' calc( var(--h1-font-size-max) * 16 ), 
+        'grad' 88;
+    }
+  }
   &.demo-wght {
     font-variation-settings: 
       'wght' calc( var(--p-vf-wght) * var(--wght-multiplier) ), 
@@ -156,6 +178,28 @@ button {
       font-variation-settings: 
         'wght' calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-l) ), 
         'wdth' 100, 
+        'YTLC' 500,
+        'YTAS' 750,
+        'YTDE' 250,
+        'YTUC' 750,
+        'opsz' calc( var(--h1-font-size-max) * 16 ), 
+        'grad' 88;
+    }
+  }
+  &.demo-wdth-stretch {
+    font-stretch: 75;
+    font-variation-settings: 
+      'wght' 500, 
+      'YTLC' 500,
+      'YTAS' 750,
+      'YTDE' 250,
+      'YTUC' 750,
+      'opsz' calc( var(--h1-font-size-max) * 16 ), 
+      'grad' 88;
+    &:hover {
+      font-stretch: 100;
+      font-variation-settings: 
+        'wght' 500, 
         'YTLC' 500,
         'YTAS' 750,
         'YTDE' 250,
