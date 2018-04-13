@@ -18,7 +18,7 @@
     <meta http-equiv="cleartype" content="on">
     
     <link rel="stylesheet" href="css/webfonts.css">
-    <link rel="stylesheet" href="css/rwt_vf_styles_plex.css">
+    <link rel="stylesheet" href="css/index-02.css">
     <!--[if lt IE 9]>
     	<script src="js/vendor/respond.min.js"></script>
     <![endif]-->
@@ -50,90 +50,65 @@
   	</script>
       
   </head>
-  <body class="plex">
+  <body>
   
-  	<!-- BEGIN feature toggles -->
-  	<a href="#" id="toggle-text-inverse" class="toggle-text-inverse button off">Color Inverse</a>
-  	<a href="#" id="toggle-ot-features" class="toggle-ot-features button on">OT Features</a>
-  	<style>
-  		.button {
-  		  font-size: 1rem;
-        font-family: "Amstelvar 1.1 VF", Georgia, "New Times Roman", serif;
-        font-variation-settings: 
-          'wght' 450, 
-          'wdth' 100, 
-          'opsz' 16, 
-          'GRAD' 88;
-  		  text-decoration: none;
-  		  color: #383838;
-  		  background-color: #fefafa;
-  		  background-image: linear-gradient(#ffffff, #ede9e9);
-  		  padding: 0.25em;
-  		  border-radius: 0.5em;
-  		  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        transition: all linear 0.2s; 	
-  		}
-  		.button:hover {
-  		  background-color: #e4e1e1;
-  		  background-image: linear-gradient(#fefafa, #cbc7c7);
-        font-variation-settings: 
-          'wght' 450, 
-          'wdth' 100, 
-          'opsz' 16, 
-          'GRAD' 150;
-  		}
-  		.toggle-text-inverse {
-  		  position: fixed; 
-  		  top: 0.5em; 
-  		  right: 8em; 
-  		  z-index: 999;
-  		}
-  		@media (min-width: 30em) {
-  			.toggle-text-inverse {
-  			    right: 0.5em; 
-  			}
-  		}
-  		.toggle-ot-features {
-  		  position: fixed; 
-  		  top: 0.5em; 
-  		  right: 0.5em; 
-  		  z-index: 999;
-  		}
-  		@media (min-width: 30em) {
-  			.toggle-ot-features {
-  			    top: 2.75em; 
-  			}
-  		}
-  		.toggle-text-inverse.on:after, 
-  		.toggle-ot-features.on:after {
-  		  content: ": on";
-  		}
-  		.toggle-text-inverse.off:after, 
-  		.toggle-ot-features.off:after {
-  		  content: ": off";
-  		}
-  	</style>
-  		
-  	<script>
-  		if (!'classList' in document.createElement('span')) {
-        document.getElementById('c-unsupported').classList.remove('hidden');
-        document.getElementById('execute').setAttribute('disabled', 'disabled');
-      } else {
-        document.getElementById('toggle-text-inverse').addEventListener('click', function(e) {
-          e.preventDefault();
-          document.getElementById('toggle-text-inverse').classList.toggle('on');
-          document.getElementById('toggle-text-inverse').classList.toggle('off');
-          document.getElementsByTagName("html")[0].classList.toggle('inverse');
-        });
-        document.getElementById('toggle-ot-features').addEventListener('click', function(e) {
-          e.preventDefault();
-        	document.getElementById('toggle-ot-features').classList.toggle('on');
-        	document.getElementById('toggle-ot-features').classList.toggle('off');
-        	document.getElementsByTagName("html")[0].classList.toggle('ot-off');
-        });
-      }
-    </script>
-    <!-- END feature toggles -->
+        		<!-- BEGIN web font toggle -->
+        		<a href="#" id="toggle-fonts" class="toggle-fonts button on">Web Fonts</a>
+				<style>
+					.button {
+					  font-size: 14px;
+					  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+					  text-decoration: none;
+					  font-weight: bold;
+					  color: #383838;
+					  background-color: #fefafa;
+					  background-image: -webkit-linear-gradient(#ffffff, #ede9e9);
+					  background-image: -moz-linear-gradient(#ffffff, #ede9e9);
+					  background-image: linear-gradient(#ffffff, #ede9e9);
+					  padding: 0.25em;
+					  border-radius: 0.5em;
+					  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+					  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+					  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+					}
+					.button:hover {
+					  background-color: #e4e1e1;
+					  background-image: -webkit-linear-gradient(#fefafa, #cbc7c7);
+					  background-image: -moz-linear-gradient(#fefafa, #cbc7c7);
+					  background-image: linear-gradient(#fefafa, #cbc7c7);
+					}
+					.toggle-fonts {
+					  position: fixed; 
+					  top: 0.5em; 
+					  right: 0.5em; 
+					  z-index: 999;
+					}
+					.toggle-fonts.on:after {
+					  content: ": on";
+					}
+					.toggle-fonts.off:after {
+					  content: ": off";
+					}
+				</style>
+				
+
+				<script>
+					if (!'classList' in document.createElement('span')) {
+  					document.getElementById('c-unsupported').classList.remove('hidden');
+            document.getElementById('execute').setAttribute('disabled', 'disabled');
+          } else {
+            document.getElementById('toggle-fonts').addEventListener('click', function(e) {
+              e.preventDefault();
+							document.getElementById('toggle-fonts').classList.toggle('on');
+							document.getElementById('toggle-fonts').classList.toggle('off');
+							document.getElementsByTagName("html")[0].classList.toggle('wf-active');
+							document.getElementsByTagName("html")[0].classList.toggle('wf-inactive');
+            });
+         	}
+        </script>
+
+        		<!-- END web font toggle -->
+  
   
     <!-- Add your site or application content here -->
     <header role="banner" class="banner clearfix" id="banner">
