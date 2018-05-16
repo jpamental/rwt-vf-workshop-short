@@ -113,11 +113,11 @@ button {
       font-variation-settings: "wght" calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-l)), "wdth" 100, "YTLC" 500, "YTAS" 750, "YTDE" 250, "YTUC" 750, "opsz" calc( var(--h1-font-size-max) * 16), "grad" 88; }
   h1.demo-wdth-stretch,
   button.demo-wdth-stretch {
-    font-stretch: 75;
+    font-stretch: 75%;
     font-variation-settings: "wght" 500, "YTLC" 500, "YTAS" 750, "YTDE" 250, "YTUC" 750, "opsz" calc( var(--h1-font-size-max) * 16), "grad" 88; }
     h1.demo-wdth-stretch:hover,
     button.demo-wdth-stretch:hover {
-      font-stretch: 100;
+      font-stretch: 100%;
       font-variation-settings: "wght" 500, "YTLC" 500, "YTAS" 750, "YTDE" 250, "YTUC" 750, "opsz" calc( var(--h1-font-size-max) * 16), "grad" 88; }
   h1.demo-wdth,
   button.demo-wdth {
